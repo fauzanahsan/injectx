@@ -170,3 +170,140 @@ Served asset /application.js - 200 OK (5ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-26 21:24:55 +0700
 Served asset /users.js - 200 OK (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "total" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "price" decimal, "released_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password_digest" varchar(255), "site_url" varchar(255), "admin" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130326133222')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120615183056')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120615185633')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Nike T90 Futsal"], ["price", #<BigDecimal:7f86c729a1a8,'0.5E6',9(36)>], ["released_at", Fri, 22 Feb 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Adidas f45 Futsal"], ["price", #<BigDecimal:7f86c71d20e0,'0.6E6',9(36)>], ["released_at", Fri, 15 Feb 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Nike mercurial"], ["price", #<BigDecimal:7f86c71e5898,'0.7E6',9(36)>], ["released_at", Sat, 19 Jan 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "League Classico"], ["price", #<BigDecimal:7f86c71ec1e8,'0.35E6',9(36)>], ["released_at", Wed, 23 Jan 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Eagle Diego"], ["price", #<BigDecimal:7f86c71b4f90,'0.25E6',9(36)>], ["released_at", Wed, 23 Jan 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Spotec S-10 Plus"], ["price", #<BigDecimal:7f86c71a9140,'0.2E6',9(36)>], ["released_at", Tue, 05 Mar 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Adidas F5"], ["price", #<BigDecimal:7f86c71c2fc8,'0.56E6',9(36)>], ["released_at", Fri, 28 Dec 2012 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Adidas Predito"], ["price", #<BigDecimal:7f86c715ff68,'0.45E6',9(36)>], ["released_at", Thu, 14 Mar 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Puma Tiesto"], ["price", #<BigDecimal:7f86c7143048,'0.34E6',9(36)>], ["released_at", Sat, 26 Jan 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Umbro Diablo"], ["price", #<BigDecimal:7f86c712be48,'0.29E6',9(36)>], ["released_at", Sun, 13 Jan 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Diadora FFV"], ["price", #<BigDecimal:7f86c7131e38,'0.38E6',9(36)>], ["released_at", Sat, 23 Mar 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "Reebok Slash"], ["price", #<BigDecimal:7f86c706eaa0,'0.49E6',9(36)>], ["released_at", Wed, 20 Feb 2013 09:26:22 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "name", "password_digest", "site_url", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "ozan"], ["password_digest", "incognito01"], ["site_url", "http://ozansugar.com"], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[35m (140.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("admin", "created_at", "name", "password_digest", "site_url", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["name", "hayley"], ["password_digest", "paramore01"], ["site_url", "http://twitter.com/hayley"], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00]]
+  [1m[36m (18.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["total", #<BigDecimal:7f86c7111368,'0.9E6',9(36)>], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["user_id", 1]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["total", #<BigDecimal:7f86c7118c58,'0.2E6',9(36)>], ["updated_at", Wed, 27 Mar 2013 09:26:22 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20120615183056)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "price" decimal, "released_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120615183056')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to CreateUsers (20120615185633)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password_digest" varchar(255), "site_url" varchar(255), "admin" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120615185633')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateOrders (20130326133222)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "total" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130326133222')[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Nike T90 Futsal"], ["price", #<BigDecimal:7fc9b48b4e28,'0.5E6',9(36)>], ["released_at", Sun, 24 Mar 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Adidas f45 Futsal"], ["price", #<BigDecimal:7fc9b4d1ed88,'0.6E6',9(36)>], ["released_at", Sun, 13 Jan 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Nike mercurial"], ["price", #<BigDecimal:7fc9b4ce6550,'0.7E6',9(36)>], ["released_at", Wed, 20 Feb 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "League Classico"], ["price", #<BigDecimal:7fc9b4c319c0,'0.35E6',9(36)>], ["released_at", Mon, 18 Mar 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Eagle Diego"], ["price", #<BigDecimal:7fc9b4f548a0,'0.25E6',9(36)>], ["released_at", Thu, 31 Jan 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Spotec S-10 Plus"], ["price", #<BigDecimal:7fc9b48a54f0,'0.2E6',9(36)>], ["released_at", Tue, 19 Feb 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Adidas F5"], ["price", #<BigDecimal:7fc9b49bd158,'0.56E6',9(36)>], ["released_at", Thu, 27 Dec 2012 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Adidas Predito"], ["price", #<BigDecimal:7fc9b487e828,'0.45E6',9(36)>], ["released_at", Thu, 07 Mar 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Puma Tiesto"], ["price", #<BigDecimal:7fc9b4889c50,'0.34E6',9(36)>], ["released_at", Tue, 01 Jan 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Umbro Diablo"], ["price", #<BigDecimal:7fc9b4f741f0,'0.29E6',9(36)>], ["released_at", Tue, 08 Jan 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Diadora FFV"], ["price", #<BigDecimal:7fc9b5f31a48,'0.38E6',9(36)>], ["released_at", Thu, 10 Jan 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("created_at", "name", "price", "released_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "Reebok Slash"], ["price", #<BigDecimal:7fc9b5f3f300,'0.49E6',9(36)>], ["released_at", Fri, 15 Feb 2013 09:27:32 UTC +00:00], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "name", "password_digest", "site_url", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "ozan"], ["password_digest", "incognito01"], ["site_url", "http://ozansugar.com"], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("admin", "created_at", "name", "password_digest", "site_url", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["name", "hayley"], ["password_digest", "paramore01"], ["site_url", "http://twitter.com/hayley"], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["total", 900000], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "orders" ("created_at", "total", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["total", 200000], ["updated_at", Wed, 27 Mar 2013 09:27:32 UTC +00:00], ["user_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml

@@ -5,4 +5,11 @@ class Product < ActiveRecord::Base
     params[:column] = col_name
     self.calculate(:price, params[:column])
   end
+
+  def self.is_product_exist?(product_name)
+    Product.exists? ["name = '#{product_name}'"]
+  end
+
+  
+  
 end

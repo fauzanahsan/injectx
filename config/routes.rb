@@ -6,5 +6,6 @@ Store::Application.routes.draw do
   resources :users
   resources :sessions
   resources :products
+  resources :orders
   root to: 'products#index'
 end

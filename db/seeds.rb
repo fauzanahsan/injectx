@@ -12,3 +12,5 @@ Product.create!(name: "Diadora FFV", price: 380000, released_at: rand(1..90).day
 Product.create!(name: "Reebok Slash", price: 490000, released_at: rand(1..90).days.ago)
 User.create!(name: "ozan", password_digest: "incognito01", site_url:"http://ozansugar.com", admin: false)
 User.create!(name: "hayley", password_digest: "paramore01",site_url:"http://twitter.com/hayley", admin: true)
+Order.create!(user_id: 1, total: 900000)
+Order.create!(user_id: 1, total: 200000)
